@@ -5,14 +5,32 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 void main() => runApp(Portfolio());
 
 class Portfolio extends StatelessWidget {
+  static const String fbUrl = 'https://facebook.com';
+  static const twitterUrl = "";
+  static const linkedInUrl = "";
+  static const instagramUrl = "";
+
+  // Future<void> _urlLauncher() async {
+  //   if (await canLaunch('https://facebook.com')) {
+  //     await launch('https://facebook.com',
+  //         forceWebView: true, forceSafariVC: true);
+  //   } else {
+  //     throw 'can not launch https://facebook.com';
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xff7BCCB5),
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Color(0xff7BCCB5),
-          title: Text("My Portfolio"),
+          backgroundColor: Color(0xffC0C0C0),
+          title: Text(
+            "My Portfolio",
+            style: TextStyle(color: Colors.white),
+          ),
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -31,10 +49,16 @@ class Portfolio extends StatelessWidget {
                     .
                      */
                     Container(
-                      margin: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                      margin: EdgeInsets.fromLTRB(5, 50, 5, 0),
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 2,
+                                spreadRadius: 2,
+                                color: Color(0xffC0C0C0))
+                          ],
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
@@ -45,21 +69,23 @@ class Portfolio extends StatelessWidget {
                           ),
                           Text(
                             "MATTHEW N. MOYONGHO",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                             ),
                           ),
                           Text(
                             "(MOBILE DEVELOPER)",
+                            textAlign: TextAlign.center,
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 18,
                             ),
                           ),
                           SizedBox(
                             height: 10,
                           ),
                           Text(
-                            "I am a mobile developer who welcome development and seek to find solutions to societal problems using flutter to build cross platform applications for IOS ans Android",
+                            "I am a mobile developer who welcome development and seek to find solutions to societal problems using flutter to build cross platform applications for IOS and Android",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 16,
@@ -85,10 +111,13 @@ class Portfolio extends StatelessWidget {
                             children: [
                               Container(
                                 //decoration: BoxDecoration(color: Colors.blue),
-                                child: Icon(
-                                  FontAwesomeIcons.facebookSquare,
-                                  color: Colors.blue[900],
-                                  size: 40,
+                                child: InkWell(
+                                  //onPressed: () => _urlLauncher,
+                                  child: Icon(
+                                    FontAwesomeIcons.facebookSquare,
+                                    color: Colors.blue[900],
+                                    size: 40,
+                                  ),
                                 ),
                               ),
                               Container(
@@ -129,8 +158,15 @@ class Portfolio extends StatelessWidget {
                      .
                      */
                     Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 2,
+                                spreadRadius: 2,
+                                color: Color(0xffC0C0C0))
+                          ],
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
@@ -380,8 +416,15 @@ class Portfolio extends StatelessWidget {
 
                      */
                     Container(
+                      margin: EdgeInsets.all(5),
                       padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                       decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 2,
+                                spreadRadius: 2,
+                                color: Color(0xffC0C0C0))
+                          ],
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10)),
                       child: Column(
